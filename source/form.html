@@ -22,6 +22,74 @@
       </nav>
     </header>
 
+    <main>
+      <section class="programm">
+        <h2 class="programm__title">Подбор программы</h2>
+        <p class="programm__legend">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="programm__form" action="post">
+
+          <fieldset>
+            <legend class="visually-hidden">Информация о вашем коте</legend>
+
+            <label for="cat-name">Имя:<sup>*</sup></label>
+            <input id="cat-name" type="text" placeholder="Барсик" required>
+
+            <label for="cat-weight">Вес(кг):<sup>*</sup></label>
+            <input id="cat-weight" type="text" placeholder="7" required>
+
+            <label for="cat-age">Возраст(лет)</label>
+            <input id="cat-age" type="text" placeholder="7">
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">Выбор курса программы</legend>
+
+            <label for="cat-sliming">Похудение</label>
+            <input id="cat-sliming" type="radio" checked>
+
+            <label for="cat-weighting">Набор массы</label>
+            <input id="cat-weighting" type="radio">
+
+            <label for="unknown">Незнаю(нужен ваш совет)</label>
+            <input id="unknown" type="radio">
+          </fieldset>
+
+          <fieldset>
+            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+            <label for="email"></label>
+            <input id="email" type="email">e-mail: <sup>*</sup></inputy>
+
+            <label for="phone">телефон: <sup>*</sup></label>
+            <input id="phone" type="tel">
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Коментарий</legend>
+            <textarea id="comment" cols="30" rows="10" placeholder="Раскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <label for="">Сахарозаменитель</label>
+            <input type="checkbox" checked>
+
+            <label for="">Питьевая вода</label>
+            <input type="checkbox">
+
+            <label for="">Молоко</label>
+            <input type="checkbox">
+
+            <label for="">Витамины</label>
+            <input type="checkbox">
+          </fieldset>
+
+          <button class="button" type="submit">Отправить заявку</button>
+
+        </form>
+      </section>
+    </main>
+
     <footer class="page-footer">
       <h2 class="visually-hidden">Дополнительная информация</h2>
 
