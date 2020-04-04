@@ -121,20 +121,4 @@ button {
   padding-right: 20px;
 
   width: auto;
-
-  outline: 3px solid brown;
-
-  &::before {
-    content: "container";
-    top: 0;
-    left: 0;
-
-    padding: 5px;
-
-    color: $main-white;
-
-    background-color: brown;
-
-    border-radius: 4px;
-  }
 }
