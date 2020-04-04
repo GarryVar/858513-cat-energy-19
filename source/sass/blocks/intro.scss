@@ -1,6 +1,4 @@
 .intro {
-  outline: 2px solid red;
-
   &--bg {
     background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, rgb(100, 168, 59), 64%, $main-white 50%);
     background-repeat: no-repeat;
@@ -16,8 +14,6 @@
   min-height: 478px;
 
   color: $main-white;
-
-  outline: 3px solid magenta;
 }
 
 .intro__title {
