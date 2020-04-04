@@ -1,0 +1,20 @@
+.programm__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 30px;
+}
+
+.programm__title {
+  margin-bottom: 35px;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.programm__subtitle {
+  font-size: 14px;
+}

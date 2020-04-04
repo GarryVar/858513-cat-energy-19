@@ -1,0 +1,49 @@
+.intro {
+  &--bg {
+    background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, rgb(100, 168, 59), 64%, $main-white 50%);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+.intro__body {
+  position: relative;
+  margin-bottom: 20px;
+  padding-top: 31px;
+
+  min-height: 478px;
+
+  color: $main-white;
+}
+
+.intro__title {
+  margin-bottom: 21px;
+
+  height: 70px;
+
+  line-height: 40px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: none;
+}
+
+.intro__slogan {
+  position: relative;
+  margin-bottom: 23px;
+
+  min-height: 16px;
+
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+
+  z-index: 2;
+}
+
+.intro__picture {
+  margin: auto;
+
+  width: 280px;
+  min-height: 271px;
+}
