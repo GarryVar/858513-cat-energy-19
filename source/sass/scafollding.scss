@@ -28,7 +28,7 @@ html {
 
 *:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px #288ddb;
+  box-shadow: 0 0 0 1px #288ddb;
 }
 
 body {
@@ -117,8 +117,12 @@ button {
 }
 
 .container {
+  margin: auto;
+
   padding-left: 20px;
   padding-right: 20px;
 
-  width: auto;
+  width: 320px;
+
+  overflow: hidden;
 }
