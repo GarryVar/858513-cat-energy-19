@@ -77,7 +77,6 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .product {
     &--more {
       .product__card {
@@ -136,7 +135,7 @@
   }
 }
 
-@media(min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .product__more {
     width: 133px;
 

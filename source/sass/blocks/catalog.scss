@@ -65,7 +65,7 @@
     width: 324px;
     max-height: 513px;
 
-    background-image:linear-gradient(180deg, $main-white 23%, $main-gray 20% 100%);
+    background-image: linear-gradient(180deg, $main-white 23%, $main-gray 20% 100%);
 
     &:last-child {
       align-self: flex-end;
@@ -84,14 +84,14 @@
     min-height: 696px;
   }
 
-   .catalog__title {
+  .catalog__title {
     margin-bottom: 72px;
     min-height: 61px;
 
     font-size: 60px;
     line-height: 1;
     text-align: left;
-   }
+  }
 
   .catalog__list {
     width: auto;

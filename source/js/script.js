@@ -15,12 +15,12 @@
   }
 
 
-   function showNavClose() {
+  function showNavClose() {
     closeNav.classList.remove('page-header__burger-close-nav--hidden');
   }
 
 
-   function hideNavClose() {
+  function hideNavClose() {
     closeNav.classList.add('page-header__burger-close-nav--hidden');
   }
 
