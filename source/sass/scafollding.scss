@@ -122,7 +122,30 @@ button {
   padding-left: 20px;
   padding-right: 20px;
 
-  width: 320px;
+  // width: auto;
 
-  overflow: hidden;
+  width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    margin: auto;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    // width: auto;
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    margin: auto;
+
+    padding-left: 40px;
+    padding-right: 40px;
+
+    width: 1300px;
+  }
 }

@@ -68,6 +68,7 @@
   position: relative;
 
   align-self: flex-start;
+  display: block;
 
   width: 120px;
   min-height: 12px;
@@ -94,101 +95,111 @@
   }
 }
 
-// @media (min-width: $tablet-width) {
-//   .categories__body {
-//     min-height: 381px;
-//   }
+@media (min-width: $tablet-width) {
+  .categories__body {
+    min-height: 381px;
+  }
 
-//   .categories__item {
-//     margin-bottom: 30px;
+  .categories__item {
+    margin-bottom: 30px;
 
-//     min-height: 372px;
-//   }
+    min-height: 372px;
 
-//   .categories__content {
-//     &--pro {
-//       background-image: url("../img/cat-pro.png");
-//       background-size: 268px 200px;
-//       background-position: 94% center;
-//       background-repeat: no-repeat;
-//     }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-//     &--slim {
-//       background-image: url("../img/cat-slim.png");
-//       background-size: 200px 212px;
-//       background-position: 94% center;
-//       background-repeat: no-repeat;
-//     }
+  .categories__content {
+    padding-top: 85px;
+    padding-left: 54px;
 
-//     padding-top: 85px;
-//     padding-left: 54px;
-//     min-height: inherit;
-//   }
+    min-height: inherit;
 
-//   .categories__title {
-//     margin-bottom: 30px;
+    &--pro {
+      background-image: url("../img/cat-pro.png");
+      background-size: 268px 200px;
+      background-position: 94% center;
+      background-repeat: no-repeat;
+    }
 
-//     min-height: 30px;
+    &--slim {
+      background-image: url("../img/cat-slim.png");
+      background-size: 200px 212px;
+      background-position: 94% center;
+      background-repeat: no-repeat;
+    }
+  }
 
-//     font-size: 36px;
-//     text-align: left;
-//   }
+  .categories__title {
+    margin-bottom: 30px;
 
-//   .categories__text {
-//     margin-right: auto;
-//     max-width: 372px;
-//     min-height: 130px;
+    min-height: 30px;
 
-//     font-size: 16px;
-//     line-height: 24px;
+    font-size: 36px;
+    text-align: left;
+  }
 
-//     border: 0;
-//   }
+  .categories__description {
+    margin-right: auto;
 
-//   .categories__login {
-//     font-size: 20px;
-//   }
-// }
+    max-width: 340px;
 
-// @media (min-width: $desktop-width) {
-//   .categories__body {
-//     margin-top: 80px;
-//   }
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
 
-//   .categories__list {
-//     display: flex;
-//     justify-content: space-between;
-//     width: 1220px;
-//   }
+    border: 0;
+  }
 
-//   .categories__item {
-//     width: 570px;
-//   }
+  .categories__login {
+    font-size: 20px;
+  }
 
-//   .categories__content {
-//     &--pro {
-//       background-image: url("../img/cat-pro.png");
-//       background-size: 137px 101px;
-//       background-position: 46px 34px;
-//       background-repeat: no-repeat;
-//     }
+  .categories__link {
+    font-size: 20px;
+  }
+}
 
-//     &--slim {
-//       background-image: url("../img/cat-slim.png");
-//       background-size: 100px 101px;
-//       background-position: 46px 34px;
-//       background-repeat: no-repeat;
-//     }
+@media (min-width: $desktop-width) {
+  .categories__body {
+    margin-top: 80px;
+  }
 
-//     padding-top: 45px;
-//     padding-left: 54px;
-//     min-height: inherit;
-//   }
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+  }
 
-//   .categories__title {
-//     margin-bottom: 78px;
-//     padding: 0;
+  .categories__item {
+    width: 570px;
+  }
 
-//     text-align: center;
-//   }
-// }
+  .categories__content {
+    &--pro {
+      background-image: url("../img/cat-pro.png");
+      background-size: 137px 101px;
+      background-position: 46px 34px;
+      background-repeat: no-repeat;
+    }
+
+    &--slim {
+      background-image: url("../img/cat-slim.png");
+      background-size: 100px 101px;
+      background-position: 46px 34px;
+      background-repeat: no-repeat;
+    }
+
+    padding-top: 45px;
+    padding-left: 54px;
+    min-height: inherit;
+  }
+
+  .categories__title {
+    margin-bottom: 78px;
+    padding: 0;
+
+    text-align: center;
+  }
+}
