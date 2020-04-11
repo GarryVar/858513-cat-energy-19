@@ -69,3 +69,101 @@
   font-size: 16px;
   text-align: center;
 }
+
+
+@media(min-width: $tablet-width) {
+  .extra__body {
+    padding-top: 70px;
+  }
+
+  .extra__title {
+    position: relative;
+
+    margin-bottom: 75px;
+    min-height: 37px;
+
+    font-size: 36px;
+    line-height: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 345px;
+      height: 3px;
+      background-color: #68b738;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  .extra__list {
+    border-left: 1px solid $main-gray;
+    border-right: 1px solid $main-gray;
+  }
+
+  .extra__item {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    padding-right: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .extra__caption {
+    min-width: 336px;
+
+    font-size: 20px;
+  }
+
+  .extra__type {
+    width: 225px;
+  }
+
+  .extra__gift {
+    position: relative;
+
+    min-height: 200px;
+
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+    background-position: 91px center, center;
+    background-size: 55px 60px, auto auto;
+  }
+
+  .extra__gift-text {
+    position: absolute;
+
+    top: 50%;
+    right: 125px;
+
+    line-height: 1.5;
+    text-align: left;
+
+    transform: translateY(-50%);
+  }
+}
+
+@media(min-width: $tablet-width) {
+  .extra__item {
+    flex-wrap: nowrap;
+  }
+
+  .extra__caption,
+  .extra__type {
+    width: 285px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .extra__item {
+    align-items: center;
+    padding:  0 27px;
+
+    min-height: 71px;
+  }
+}
