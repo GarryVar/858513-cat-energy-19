@@ -53,6 +53,31 @@
   }
 }
 
+.programm__caption {
+  position: relative;
+  top: 32px;
+
+  margin-bottom: 30px;
+
+  width: 100%;
+
+  font-size: 24px;
+  line-height: 1;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    right: 0;
+
+    width: 100px;
+    height: 3px;
+
+    background-color: $main-green;
+  }
+}
+
 .programm__form-column {
   display: flex;
   align-items: center;
@@ -62,7 +87,7 @@
     margin-right: 15px;
   }
 
-  input[type="text"], {
+  input[type="text"] {
     flex-grow: 1;
     padding-left: 16px;
 
@@ -121,10 +146,6 @@
     opacity: 0.3;
   }
 
-  label {
-    max-width: 186px;
-  }
-
   span {
     position: absolute;
 
@@ -147,29 +168,6 @@
 .programm__cat-contacts,
 .programm__cat-comments,
 .programm__ingredients {
-  legend {
-    position: relative;
-    top: 32px;
-
-    margin-bottom: 30px;
-
-    width: 100%;
-
-    font-size: 24px;
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      top: 11px;
-      right: 0;
-
-      width: 100px;
-      height: 3px;
-
-      background-color: $main-green;
-    }
-  }
 
   input[type="email"],
   input[type="tel"] {
@@ -208,7 +206,7 @@
   textarea {
     padding-top: 15px;
 
-    min-width: 280px;
+    width: 100%;
     height: 150px;
 
     border: 0;
@@ -287,3 +285,147 @@
   font-family: "Arial", sans-serif;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .programm__body {
+    align-items: flex-start;
+  }
+
+  .programm__title {
+    line-height: 1;
+    font-size: 60px;
+    text-align: left;
+  }
+
+  .programm__subtitle {
+    min-width: 323px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+
+  .programm__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:  space-between;
+
+    fieldset {
+      width: 100%;
+
+      border-bottom: 0;
+
+    input {
+      &::placeholder {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .programm__course {
+    padding-top: 25px;
+    padding-left: 28px;
+    border: 1px solid $main-gray;
+    p {
+      width: 324px;
+    }
+  }
+
+  .programm__ingredients {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      margin-bottom: 32px;
+      width: 324px;
+    }
+
+    legend {
+      width: 100%;
+    }
+
+    label {
+      font-size: 20px;
+    }
+  }
+
+
+  .programm__legend {
+    margin: 0;
+    margin-left: 61px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programm__body {
+    padding-bottom: 82px;
+  }
+  .programm__form {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    fieldset {
+      &:first-child,
+      &:nth-child(2) {
+        width: 570px;
+      }
+    }
+  }
+
+  .programm__form-column {
+    margin-bottom: 20px;
+    input {
+      height: 52px;
+    }
+  }
+
+  .programm__caption {
+    font-size: 36px;
+  }
+
+  .programm__course {
+    padding: 20px;
+  }
+
+  .programm__cat-contacts {
+    display:  flex;
+    justify-content:  space-between;
+
+    padding-top: 30px;
+  }
+
+  .programm__cat-comments {
+    padding-top: 30px;
+  }
+
+  .programm__form-column {
+    width: 570px;
+  }
+
+  .programm__ingredients {
+    justify-content: space-between;
+
+    padding-top: 13px;
+
+    p {
+      width: 245px;
+    }
+
+
+    input[type="checkbox"],
+    span {
+      margin: 0;
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .programm__legend {
+    margin-right: auto;
+    margin-left: 82px;
+
+    font-size: 16px;
+  }
+}
+

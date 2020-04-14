@@ -140,6 +140,10 @@
 
     border: 0;
   }
+
+  .page-footer__location {
+    background-color: $main-gray;
+  }
 }
 
 @media (min-width: $desktop-width) {
