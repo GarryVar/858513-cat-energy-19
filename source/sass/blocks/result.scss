@@ -265,7 +265,6 @@
   .result__picture {
     position: relative;
 
-    // display: flex;
     justify-content: space-between;
 
     margin-top: 87px;
@@ -286,7 +285,6 @@
 
   .result__picture-before {
     background-image: url("../img/before-tablet@1x.png"), linear-gradient(to top, $main-gray 69%, $main-white 0%);
-
   }
 
   .result__picture-after {
@@ -346,7 +344,7 @@
 }
 
 @media (min-width: $desktop-width) {
- .result {
+  .result {
     &--bg {
       background-image: linear-gradient(to top, $main-gray 70%, $main-white 0%);
     }
@@ -418,7 +416,8 @@
   }
 
   .result__picture-before {
-  background-image: url("../img/before-tablet@1x.png"), linear-gradient(to top, $main-gray 62.5%, $main-white 0%);
+    background-image: url("../img/before-tablet@1x.png"), linear-gradient(to top, $main-gray 62.5%, $main-white 0%);
+  }
 
   .result__picture-after {
     background-image: url("../img/after-tablet@1x.png"), linear-gradient(to top, $main-gray 62.5%, $main-white 0%);
@@ -451,5 +450,4 @@
 
     width: 430px;
   }
-}
 }
