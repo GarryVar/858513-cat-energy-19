@@ -75,7 +75,24 @@
     z-index: 2;
   }
 
+  .button__submit {
+    width: 283px;
+  }
+
+  .button__buy {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
   .button__buy {
     width: 245px;
+  }
+
+  .button__submit {
+    width: 568px;
+    height: 52px;
+
+    font-size: 20px;
   }
 }
