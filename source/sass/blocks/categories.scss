@@ -38,6 +38,7 @@
   &--slim,
   &--pro {
     position: relative;
+
     &::after {
       content: "";
 
@@ -74,7 +75,8 @@
       background-image: url("../img/icon-cat-pro.svg");
       background-size: 67px auto;
     }
-    .categories__title  {
+
+    .categories__title {
       margin-left: 35px;
     }
   }
