@@ -1,13 +1,37 @@
+.extra {
+  &--green-border {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 46px;
+      right: 0;
+
+      width: 35%;
+      height: 3px;
+
+      background-color: #68b738;
+    }
+  }
+}
+
 .extra__body {
   padding-top: 31px;
 }
 
 .extra__title {
+  position: relative;
+
   margin-bottom: 31px;
+
+  width: 254px;
 
   font-size: 24px;
   font-weight: normal;
   text-align: left;
+  background-color: $main-white;
 }
 
 .extra__list {
@@ -72,30 +96,30 @@
 
 
 @media (min-width: $tablet-width) {
+  .extra {
+    &--green-border {
+      &::before {
+        top: 90px;
+
+        width: 100%;
+      }
+    }
+  }
+
   .extra__body {
     padding-top: 70px;
   }
 
   .extra__title {
-    position: relative;
-
     margin-bottom: 75px;
+    padding-right: 20px;
+    padding-left: 30px;
+
+    width: 400px;
     min-height: 37px;
 
     font-size: 36px;
     line-height: 1;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 345px;
-      height: 3px;
-      background-color: #68b738;
-
-      transform: translateY(-50%);
-    }
   }
 
   .extra__list {
@@ -152,7 +176,6 @@
   }
 }
 
-
 @media (min-width: $desktop-width) {
   .extra__body {
     display: flex;
@@ -160,10 +183,6 @@
     justify-content: space-between;
 
     margin-bottom: 86px;
-  }
-
-  .extra__title {
-    width: 100%;
   }
 
   .extra__list {

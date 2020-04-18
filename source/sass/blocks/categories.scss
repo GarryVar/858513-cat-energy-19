@@ -18,18 +18,67 @@
 
   background: $main-gray;
 
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 51px;
+
+    background-color: $main-green;
+
+    border-radius: 50%;
+
+    z-index: 1;
+  }
+
+  &--slim,
   &--pro {
-    background-image: url("../img/icon-cat-pro.svg");
-    background-size: 47px 37px;
-    background-position: 15px 26px;
-    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
   }
 
   &--slim {
-    background-image: url("../img/icon-cat-slim.svg");
-    background-size: 43px 43px;
-    background-position: 15px 26px;
-    background-repeat: no-repeat;
+    &::after {
+      top: 22px;
+      left: 30px;
+
+      width: 35px;
+      height: 49px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-size: 35px auto;
+    }
+  }
+
+  &--pro {
+    &::after {
+      top: 35px;
+      left: 13px;
+
+      width: 67px;
+      height: 28px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-size: 67px auto;
+    }
+
+    .categories__title {
+      margin-left: 35px;
+    }
   }
 }
 
@@ -88,8 +137,9 @@
     width: 24px;
     height: 11px;
 
-    background-image: url("../img/right-arrow-long.png");
-
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-size: 24px auto;
 
     transform: translateY(-50%);
   }
@@ -116,18 +166,48 @@
 
     min-height: inherit;
 
-    &--pro {
-      background-image: url("../img/cat-pro.png");
-      background-size: 268px 200px;
-      background-position: 94% center;
-      background-repeat: no-repeat;
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 92px;
+      left: auto;
+      right: 62px;
+
+      width: 200px;
+      height: 200px;
+
+      background-color: $main-green;
+
+      border-radius: 50%;
+
+      z-index: 1;
     }
 
     &--slim {
-      background-image: url("../img/cat-slim.png");
-      background-size: 200px 212px;
-      background-position: 94% center;
-      background-repeat: no-repeat;
+      &::after {
+        top: 80px;
+        left: auto;
+        right: 92px;
+
+        width: 140px;
+        height: 194px;
+
+        background-size: 140px auto;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 135px;
+        left: auto;
+        right: 28px;
+
+        width: 268px;
+        height: 112px;
+
+        background-size: 268px auto;
+      }
     }
   }
 
@@ -157,7 +237,13 @@
   }
 
   .categories__link {
+    width: 100%;
+
     font-size: 20px;
+
+    &::after {
+      left: 124px;
+    }
   }
 }
 
@@ -177,29 +263,63 @@
   }
 
   .categories__content {
-    &--pro {
-      background-image: url("../img/cat-pro.png");
-      background-size: 137px 101px;
-      background-position: 46px 34px;
-      background-repeat: no-repeat;
+    padding-top: 81px;
+    padding-bottom: 62px;
+    padding-left: 52px;
+
+    height: auto;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+
+      background-color: $main-green;
+
+      border-radius: 50%;
+
+      z-index: 1;
     }
+
 
     &--slim {
-      background-image: url("../img/cat-slim.png");
-      background-size: 100px 101px;
-      background-position: 46px 34px;
-      background-repeat: no-repeat;
+      &::after {
+        top: 41px;
+        left: 66px;
+
+        width: 70px;
+        height: 97px;
+
+        background-size: 70px auto;
+      }
     }
 
-    padding-top: 45px;
-    padding-left: 54px;
-    min-height: inherit;
+    &--pro {
+      &::after {
+        top: 69px;
+        left: 34px;
+
+        width: 134px;
+        height: 56px;
+
+        background-size: 134px auto;
+      }
+    }
   }
 
   .categories__title {
-    margin-bottom: 78px;
+    margin-bottom: 75px;
     padding: 0;
 
     text-align: center;
+  }
+
+  .categories__description {
+    margin-bottom: 36px;
   }
 }
