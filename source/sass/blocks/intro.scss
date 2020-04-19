@@ -3,6 +3,10 @@
     background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(to bottom, rgb(100, 168, 59), 64%, $main-white 50%);
     background-repeat: no-repeat;
     background-position: center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to right, $main-white 50%, rgb(100, 168, 59) 50%);
+    }
   }
 }
 
@@ -113,6 +117,10 @@
       background-repeat: no-repeat;
       background-size: 50%, auto;
       background-position: right center, center;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, $main-white 50%, rgb(100, 168, 59) 50%);
+      }
     }
   }
 

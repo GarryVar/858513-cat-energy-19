@@ -132,11 +132,21 @@
 }
 
 .result__picture-before {
-  background-image: url("../img/before-mobile@1X.png");
+  background-image: url("../img/before-mobile@1x.png");
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+  }
 }
 
 .result__picture-after {
-  background-image: url("../img/after-mobile@1X.png");
+  background-image: url("../img/after-mobile@1x.png");
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+  }
 
   z-index: 1;
 }
@@ -285,10 +295,18 @@
 
   .result__picture-before {
     background-image: url("../img/before-tablet@1x.png"), linear-gradient(to top, $main-gray 69%, $main-white 0%);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
   }
 
   .result__picture-after {
     background-image: url("../img/after-tablet@1x.png"), linear-gradient(to top, $main-gray 69%, $main-white 0%);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+    }
 
     z-index: 1;
   }
