@@ -28,7 +28,7 @@ html {
 
 *:focus {
   outline: 0;
-  box-shadow: 0 0 0 1px #288ddb;
+  // box-shadow: 0 0 0 1px #288ddb;
 }
 
 body {
@@ -45,6 +45,8 @@ body {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
+
+  background-color: $main-white;
 
   // background-size: 320px auto;
   // background-position: center -195px;

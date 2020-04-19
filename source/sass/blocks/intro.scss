@@ -5,7 +5,8 @@
     background-position: center top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to right, $main-white 50%, rgb(100, 168, 59) 50%);
+      background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to bottom, rgb(100, 168, 59), 64%, $main-white 50%);
+      background-size: 320px, auto;
     }
   }
 }
