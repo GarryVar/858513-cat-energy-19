@@ -1,3 +1,25 @@
+.programm {
+  &--green-border {
+    position: relative;
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 50%;
+
+      width: 320px;
+      height: 3px;
+
+      background-color: $main-green;
+
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+}
+
 .programm__body {
   display: flex;
   flex-direction: column;
@@ -59,26 +81,17 @@
 
   margin-bottom: 30px;
 
-  width: 100%;
+  width: 200px;
 
   font-size: 24px;
   line-height: 1;
 
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 11px;
-    right: 0;
-
-    width: 100px;
-    height: 3px;
-
-    background-color: $main-green;
-  }
+  background-color: $main-white;
 }
 
 .programm__form-column {
+  position: relative;
+
   display: flex;
   align-items: center;
   margin-bottom: 14px;
@@ -100,6 +113,27 @@
       color: $text-color;
       text-transform: uppercase;
     }
+  }
+}
+
+.programm__input-btn {
+  position: absolute;
+
+  top: 50%;
+  right: 16px;
+
+  transform: translateY(-50%);
+
+  background-color: transparent;
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -286,6 +320,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .programm {
+    &--green-border {
+      &::before {
+        min-width: 768px;
+      }
+    }
+  }
+
   .programm__body {
     align-items: flex-start;
   }
@@ -321,6 +363,11 @@
     }
   }
 
+  .programm__caption {
+    width: auto;
+    font-size: 36px;
+  }
+
   .programm__course {
     padding-top: 25px;
     padding-left: 28px;
@@ -352,6 +399,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .programm {
+    &--green-border {
+      &::before {
+        left: -40px;
+        min-width: 1300px;
+      }
+    }
+  }
+
   .programm__body {
     padding-bottom: 82px;
   }
@@ -380,6 +436,7 @@
   }
 
   .programm__caption {
+    padding: 0 20px;
     font-size: 36px;
   }
 
