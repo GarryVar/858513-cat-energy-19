@@ -235,9 +235,8 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
-
-}
 
   .extra__gift-text {
     margin: 0;

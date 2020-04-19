@@ -143,19 +143,18 @@
 
     transform: translateY(-50%);
   }
-
 }
 
-  .categories__link:hover.categories__link::after {
-    width: 33px;
+.categories__link:hover.categories__link::after {
+  width: 33px;
 
-    background-image: url("../img/icon-right-arrow-verylong.svg");
-    background-size: 33px auto;
-  }
+  background-image: url("../img/icon-right-arrow-verylong.svg");
+  background-size: 33px auto;
+}
 
-  .categories__link:active {
-    opacity: 0.3;
-  }
+.categories__link:active {
+  opacity: 0.3;
+}
 
 @media (min-width: $tablet-width) {
   .categories__body {
