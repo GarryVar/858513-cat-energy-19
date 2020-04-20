@@ -42,6 +42,7 @@
   font-size: 14px;
   text-align: center;
   font-weight: normal;
+  text-transform: uppercase;
 
   z-index: 2;
 }
@@ -58,7 +59,7 @@
     &--bg {
       background-image: none;
 
-      background-color: rgb(255, 255, 255);
+      background-color: $main-white;
     }
   }
 

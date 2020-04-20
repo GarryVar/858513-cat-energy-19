@@ -40,7 +40,12 @@
 @media (min-width: $desktop-width) {
   .location__text,
   .location__address {
-    width: 285px;
+    padding: 0;
+    width: 170px;
+  }
+
+  .location__text {
+    text-transform: uppercase;
   }
 
   .location__address {

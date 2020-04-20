@@ -1,4 +1,4 @@
-.programm {
+.program {
   &--green-border {
     position: relative;
 
@@ -21,7 +21,7 @@
   }
 }
 
-.programm__body {
+.program__body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@
   padding-bottom: 34px;
 }
 
-.programm__title {
+.program__title {
   margin-bottom: 35px;
 
   font-family: "Oswald", sans-serif;
@@ -39,7 +39,7 @@
   font-size: 36px;
 }
 
-.programm__subtitle {
+.program__subtitle {
   margin-bottom: 40px;
 
   width: 226px;
@@ -48,7 +48,7 @@
   text-transform: uppercase;
 }
 
-.programm__form {
+.program__form {
   fieldset {
     margin: 0;
     padding: 32px 0;
@@ -76,7 +76,7 @@
   }
 }
 
-.programm__caption {
+.program__caption {
   position: relative;
   top: 32px;
 
@@ -90,7 +90,7 @@
   background-color: $main-white;
 }
 
-.programm__form-column {
+.program__form-column {
   position: relative;
 
   display: flex;
@@ -117,7 +117,7 @@
   }
 }
 
-.programm__input-btn {
+.program__input-btn {
   position: absolute;
 
   top: 50%;
@@ -138,7 +138,7 @@
   }
 }
 
-.programm__course {
+.program__course {
   display: flex;
   flex-wrap: wrap;
 
@@ -200,9 +200,9 @@
   }
 }
 
-.programm__cat-contacts,
-.programm__cat-comments,
-.programm__ingredients {
+.program__cat-contacts,
+.program__cat-comments,
+.program__ingredients {
   input[type="email"],
   input[type="tel"] {
     flex-grow: 1;
@@ -230,7 +230,7 @@
   }
 }
 
-.programm__cat-comments {
+.program__cat-comments {
   legend {
     &::after {
       width: 158px;
@@ -255,7 +255,7 @@
   }
 }
 
-.programm__ingredients {
+.program__ingredients {
   legend {
     &::after {
       width: 136px;
@@ -310,7 +310,7 @@
   }
 }
 
-.programm__legend {
+.program__legend {
   display: block;
   margin-top: 23px;
 
@@ -321,7 +321,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .programm {
+  .program {
     &--green-border {
       &::before {
         min-width: 768px;
@@ -329,23 +329,23 @@
     }
   }
 
-  .programm__body {
+  .program__body {
     align-items: flex-start;
   }
 
-  .programm__title {
+  .program__title {
     line-height: 1;
     font-size: 60px;
     text-align: left;
   }
 
-  .programm__subtitle {
+  .program__subtitle {
     min-width: 323px;
     line-height: 1.5;
     font-size: 20px;
   }
 
-  .programm__form {
+  .program__form {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -364,18 +364,18 @@
     }
   }
 
-  .programm__caption {
+  .program__caption {
     width: auto;
     font-size: 36px;
   }
 
-  .programm__course {
+  .program__course {
     padding-top: 25px;
     padding-left: 28px;
     border: 1px solid $main-gray;
   }
 
-  .programm__ingredients {
+  .program__ingredients {
     display: flex;
     flex-wrap: wrap;
 
@@ -393,32 +393,41 @@
     }
   }
 
-  .programm__legend {
+  .program__legend {
     margin: 0;
     margin-left: 61px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programm {
+  .program {
     &--green-border {
       &::before {
-        left: -40px;
-        min-width: 1300px;
+        width: 100vw;
       }
     }
   }
 
-  .programm__body {
+  .program__body {
     padding-bottom: 82px;
   }
 
-  .programm__form {
+  .program__form {
+    label {
+      font-size: 20px;
+    }
+
+    fieldset:nth-child(3) {
+      margin-top: 70px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
 
     fieldset {
+      padding: 0;
+
       &:first-child,
       &:nth-child(2) {
         width: 570px;
@@ -426,9 +435,8 @@
     }
   }
 
-  .programm__form-column {
-    margin-bottom: 20px;
-
+  .program__form-column {
+    margin: 0;
     width: 570px;
 
     input {
@@ -436,30 +444,51 @@
     }
   }
 
-  .programm__caption {
-    padding: 0 20px;
+  .program__caption {
+    padding: 0;
+    padding-right: 20px;
     font-size: 36px;
   }
 
-  .programm__course {
+  .program__course {
     padding: 20px;
+
+    label {
+      font-size: 20px;
+    }
+
+    input[type="radio"],
+    span {
+      width: 40px;
+      height: 40px;
+
+      box-shadow: inset 0 0 0 11px $main-white, 0 0 0 1px #cdcdcd;
+    }
   }
 
-  .programm__cat-contacts {
+  .program__cat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+  }
+
+  .program__cat-contacts {
     display: flex;
     justify-content: space-between;
 
-    padding-top: 30px;
+    margin-bottom: 70px;
+    padding-top: 70px;
   }
 
-  .programm__cat-comments {
-    padding-top: 30px;
+  .program__cat-comments {
+    padding-top: 70px;
   }
 
-  .programm__ingredients {
+  .program__ingredients {
     justify-content: space-between;
 
-    padding-top: 13px;
+    padding-top: 53px;
 
     p {
       width: 245px;
@@ -474,7 +503,7 @@
     }
   }
 
-  .programm__legend {
+  .program__legend {
     margin-right: auto;
     margin-left: 82px;
 
