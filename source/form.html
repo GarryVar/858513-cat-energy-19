@@ -56,27 +56,27 @@
     </header>
 
     <main>
-      <section class="programm">
+      <section class="program">
         <div class="container">
-          <div class="programm__body">
-            <h2 class="programm__title">Подбор программы</h2>
-            <p class="programm__subtitle">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
-            <form class="programm__form" action="post">
+          <div class="program__body">
+            <h2 class="program__title">Подбор программы</h2>
+            <p class="program__subtitle">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
+            <form class="program__form" action="post">
 
               <fieldset>
                 <legend class="visually-hidden">Информация о вашем коте</legend>
-                <div class="programm__cat-info">
-                  <div class="programm__form-column">
+                <div class="program__cat-info">
+                  <div class="program__form-column">
                     <label for="cat-name">Имя:<sup>*</sup></label>
                     <input id="cat-name" type="text" name="name" placeholder="Барсик" required>
                   </div>
 
-                  <div class="programm__form-column">
+                  <div class="program__form-column">
                     <label for="cat-weight">Вес(кг):<sup>*</sup></label>
                     <input id="cat-weight" type="text" name="weight" placeholder="7" required>
                   </div>
 
-                  <div class="programm__form-column">
+                  <div class="program__form-column">
                     <label for="cat-age">Возраст(лет):</label>
                     <input id="cat-age" type="text" name="age" placeholder="7">
                   </div>
@@ -85,7 +85,7 @@
 
               <fieldset>
                 <legend class="visually-hidden">Выбор курса программы</legend>
-                <div class="programm__course">
+                <div class="program__course">
                   <p>
                     <input id="cat-sliming" type="radio" checked>
                     <span></span>
@@ -107,12 +107,12 @@
               </fieldset>
 
               <fieldset>
-                <legend class="programm__caption programm--green-border">Контактные данные (владельца кота)</legend>
-                <div class="programm__cat-contacts">
-                  <div class="programm__form-column">
+                <legend class="program__caption program--green-border">Контактные данные (владельца кота)</legend>
+                <div class="program__cat-contacts">
+                  <div class="program__form-column">
                     <label for="email">e-mail: <sup>*</sup></label>
                     <input id="email" type="email" placeholder="kuklachev@mail.com">
-                    <button class="programm__input-btn programm__input-btn--email" type="button">
+                    <button class="program__input-btn program__input-btn--email" type="button">
                       <svg version="1.1" x="0px" y="0px" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
                         <style>
                           button svg:active {
@@ -124,10 +124,10 @@
                     </button>
                   </div>
 
-                  <div class="programm__form-column">
+                  <div class="program__form-column">
                     <label for="phone">телефон: <sup>*</sup></label>
                     <input id="phone" type="tel" placeholder="8 (960) 900-60-90">
-                    <button class="programm__input-btn programm__input-btn--phone" type="button">
+                    <button class="program__input-btn program__input-btn--phone" type="button">
                       <svg version="1.1" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
                         <style>
                           button svg:active {
@@ -147,15 +147,15 @@
               </fieldset>
 
               <fieldset>
-                <legend class="programm__caption programm--green-border">Коментарий</legend>
-                <div class="programm__cat-comments">
+                <legend class="program__caption program--green-border">Коментарий</legend>
+                <div class="program__cat-comments">
                   <textarea id="comment" cols="30" rows="10" placeholder="Раскажите обо всех повадках кота"></textarea>
                 </div>
               </fieldset>
 
               <fieldset>
-                  <legend class="programm__caption programm--green-border">Дополнительно</legend>
-                  <div class="programm__ingredients">
+                  <legend class="program__caption program--green-border">Дополнительно</legend>
+                  <div class="program__ingredients">
                     <p>
                       <input id="sugar" type="checkbox" checked>
                       <span></span>
@@ -183,7 +183,7 @@
               </fieldset>
 
               <button class="button button__submit" type="submit">Отправить заявку</button>
-              <span class="programm__legend"><sup>*</sup> - Обязательные поля</span>
+              <span class="program__legend"><sup>*</sup> - Обязательные поля</span>
             </form>
           </div>
         </div>
@@ -212,7 +212,8 @@
 
             <ol class="page-footer__social-list">
               <li>
-                <a class="page-footer__social-link" href="#"> Мы во вконтакте
+                <a class="page-footer__social-link" href="#">
+                  <span class="visually-hidden">Мы во вконтакте</span>
                   <svg version="1.1" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                     <style>
                       .vk {
@@ -232,7 +233,8 @@
               </li>
 
               <li>
-                <a class="page-footer__social-link" href="#">Мы в инстаграме
+                <a class="page-footer__social-link" href="#">
+                  <span class="visually-hidden">Мы в инстаграме</span>
                   <svg version="1.1" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                     <style>
                       .instagram {
@@ -255,7 +257,8 @@
               </li>
 
               <li>
-                <a class="page-footer__social-link" href="#">Мы на фейсбуке
+                <a class="page-footer__social-link" href="#">
+                  <span class="visually-hidden">Мы на фейсбуке</span>
                   <svg version="1.1" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                     <style>
                       .fb {
@@ -277,7 +280,7 @@
             </ol>
 
             <div class="page-footer__copyright">
-              <span>html</span>academy
+              <span>html&nbsp;</span>academy
               <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
                 <svg viewBox="0 0 60 60">
                   <style>
