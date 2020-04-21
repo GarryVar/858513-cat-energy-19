@@ -120,8 +120,6 @@ button {
 }
 
 .container {
-  // margin: auto;
-
   padding-left: 20px;
   padding-right: 20px;
 
@@ -132,20 +130,17 @@ button {
 
 @media (min-width: $tablet-width) {
   .container {
-    // margin: auto;
-
+    margin: auto;
     padding-left: 30px;
     padding-right: 30px;
 
-    width: auto;
-    // width: 768px;
+    width: 768px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .container {
     margin: auto;
-
     padding-left: 40px;
     padding-right: 40px;
 
