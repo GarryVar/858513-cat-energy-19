@@ -129,12 +129,17 @@
 
   .product__picture,
   .product__info {
+    display: flex;
+    align-items: flex-end;
+
     width: 100%;
   }
 
   .product__picture {
 
     margin-bottom: 38px;
+
+    min-height: 208px;
   }
 }
 

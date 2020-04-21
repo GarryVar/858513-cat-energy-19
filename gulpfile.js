@@ -5,8 +5,6 @@ const gulp = require('gulp'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
       posthtml = require('gulp-posthtml'),
-      concat = require('gulp-concat'),
-      include = require('posthtml-include'),
       webp = require('gulp-webp'),
       imagemin = require('gulp-imagemin'),
       server = require('browser-sync').create(),
@@ -16,7 +14,6 @@ const gulp = require('gulp'),
       csso = require('gulp-csso'),
       del = require('del'),
       rename = require('gulp-rename'),
-      htmlmin = require('gulp-htmlmin'),
       babel = require('gulp-babel'),
       uglify = require('gulp-uglify-es').default;
 
@@ -38,8 +35,8 @@ gulp.task('css', () => {
 //HTML
 gulp.task('html', () => {
   return gulp.src('source/*.html')
-        .pipe(htmlmin({collapseWhitespace: true }))
         .pipe(gulp.dest('build'))
+        .pipe(reload({stream: true}))
 });
 
 //JS
@@ -54,10 +51,10 @@ gulp.task('js', () => {
 
 //IMAGEMIN
 gulp.task('images', () => {
-  return gulp.src('source/img/**/*.{png, jpg, jpeg, svg}')
+  return gulp.src('source/img/**/*.{png, jpg, svg}')
         .pipe(imagemin([
           imagemin.optipng({optimizationLevel: 3}),
-          imagemin.jpegtran({progressive: true}),
+          imagemin.mozjpeg({progressive: true}),
           imagemin.svgo()
           ]))
         .pipe(gulp.dest('build/img'))
@@ -65,9 +62,9 @@ gulp.task('images', () => {
 
 //WEBP
 gulp.task('webp', () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png, jpg}')
         .pipe(webp({quality: 50}))
-        .pipe(gulp.dest('source/img/'))
+        .pipe(gulp.dest('source/img'))
 });
 
 //CLEAN
