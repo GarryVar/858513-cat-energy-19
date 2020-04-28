@@ -26,11 +26,15 @@
 .advantages__item {
   position: relative;
 
+  padding-left: 80px;
+
+  width: 100%;
+  min-height: 60px;
+
   &::after {
     content: "";
 
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -49,20 +53,27 @@
 
   &:nth-child(2)::after {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");      
+    }
   }
 
   &:nth-child(3)::after {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");      
+    }
   }
 
   &:nth-child(4)::after {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");      
+    }
   }
-
-  padding-left: 80px;
-
-  width: 100%;
-  min-height: 60px;
 }
 
 .advantages__text {

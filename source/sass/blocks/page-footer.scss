@@ -42,9 +42,19 @@
 }
 
 .page-footer__map {
-  iframe {
+  height: 362px;
+
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
+  iframe{
     width: 100%;
-    height: 362px;
+    height: inherit;
 
     border: 0;
   }

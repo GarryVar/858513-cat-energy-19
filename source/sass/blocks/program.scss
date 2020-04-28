@@ -1,26 +1,3 @@
-.program {
-  &--green-border {
-    position: relative;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 50%;
-
-      width: 320px;
-      height: 3px;
-
-      background-color: $main-green;
-
-      transform: translateY(-50%);
-      z-index: -1;
-    }
-  }
-}
-
 .program__body {
   display: flex;
   flex-direction: column;
@@ -33,6 +10,7 @@
 
 .program__title {
   margin-bottom: 35px;
+  margin-right: auto;
 
   font-family: "Oswald", sans-serif;
   font-weight: normal;
@@ -40,7 +18,8 @@
 }
 
 .program__subtitle {
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  margin-right: auto;
 
   width: 226px;
 
@@ -228,15 +207,28 @@
       text-transform: uppercase;
     }
   }
+
+  &--green-border {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -45px;
+      left: 0;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $main-green;
+
+      z-index: -1;
+    }
+  }
 }
 
 .program__cat-comments {
-  legend {
-    &::after {
-      width: 158px;
-    }
-  }
-
   textarea {
     padding-top: 15px;
 
@@ -321,14 +313,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .program {
-    &--green-border {
-      &::before {
-        min-width: 768px;
-      }
-    }
-  }
-
   .program__body {
     align-items: flex-start;
   }
@@ -365,6 +349,8 @@
   }
 
   .program__caption {
+    padding-right: 20px;
+
     width: auto;
     font-size: 36px;
   }
@@ -373,6 +359,20 @@
     padding-top: 25px;
     padding-left: 28px;
     border: 1px solid $main-gray;
+  }
+
+  .program__cat-contacts,
+  .program__cat-comments,
+  .program__ingredients {
+    &--green-border {
+      position: relative;
+
+      &::before {
+        top: -45px;
+
+        width: 200%;
+      }
+    }
   }
 
   .program__ingredients {
@@ -400,14 +400,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .program {
-    &--green-border {
-      &::before {
-        width: 100vw;
-      }
-    }
-  }
-
   .program__body {
     padding-bottom: 82px;
   }
@@ -465,6 +457,12 @@
       box-shadow: inset 0 0 0 11px $main-white, 0 0 0 1px #cdcdcd;
     }
   }
+
+  .program__cat-contacts,
+.program__cat-comments,
+.program__ingredients {
+
+}
 
   .program__cat-info {
     display: flex;

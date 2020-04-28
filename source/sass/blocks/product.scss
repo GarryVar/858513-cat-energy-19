@@ -54,7 +54,7 @@
 }
 
 .product__title {
-  width: 72px;
+  min-width: 72px;
   min-height: 50px;
 
   line-height: 20px;
@@ -65,6 +65,9 @@
 .product__more {
   margin-top: 83px;
 
+  width: 100%;
+
+  text-align: center;
   text-transform: uppercase;
 }
 

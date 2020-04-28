@@ -261,15 +261,24 @@
   }
 
   .result__money {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
     margin-top: 0;
     margin-left: auto;
-    padding-top: 6px;
 
     width: 192px;
 
     line-height: 30px;
     font-size: 20px;
     text-align: right;
+
+    span {
+      display: block;
+
+      margin-left: auto;
+    }
   }
 
   .result__picture {
