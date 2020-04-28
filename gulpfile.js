@@ -12,6 +12,7 @@ const gulp = require('gulp'),
       plumber = require('gulp-plumber'),
       sass = require('gulp-sass'),
       csso = require('gulp-csso'),
+      htmlmin = require('gulp-htmlmin'),
       del = require('del'),
       rename = require('gulp-rename'),
       babel = require('gulp-babel'),
@@ -35,6 +36,7 @@ gulp.task('css', () => {
 //HTML
 gulp.task('html', () => {
   return gulp.src('source/*.html')
+        .pipe(htmlmin({collapseWhitespace: true }))
         .pipe(gulp.dest('build'))
         .pipe(reload({stream: true}))
 });
@@ -51,10 +53,10 @@ gulp.task('js', () => {
 
 //IMAGEMIN
 gulp.task('images', () => {
-  return gulp.src('source/img/**/*.{png, jpg, svg}')
+  return gulp.src('source/img/**/*.{png, jpg, jpeg, svg}')
         .pipe(imagemin([
           imagemin.optipng({optimizationLevel: 3}),
-          imagemin.mozjpeg({progressive: true}),
+          imagemin.jpegtran({progressive: true}),
           imagemin.svgo()
           ]))
         .pipe(gulp.dest('build/img'))
@@ -62,9 +64,9 @@ gulp.task('images', () => {
 
 //WEBP
 gulp.task('webp', () => {
-  return gulp.src('source/img/**/*.{png, jpg}')
+  return gulp.src('source/img/**/*.{png, jpg, jpeg}')
         .pipe(webp({quality: 50}))
-        .pipe(gulp.dest('source/img'))
+        .pipe(gulp.dest('source/img/'))
 });
 
 //CLEAN
