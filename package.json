@@ -8,7 +8,7 @@
     "@babel/preset-env": "^7.9.5",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "^9.7.3",
-    "browser-sync": "2.26.7",
+    "browser-sync": "^2.26.13",
     "del": "^5.1.0",
     "gulp": "4.0.2",
     "gulp-babel": "^8.0.0",
@@ -22,6 +22,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
+    "node-sass": "^4.14.1",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
@@ -44,8 +45,5 @@
     "src/scripts/**/*.js",
     "src/img/**/*.svg",
     "src/sass/**/*.{sass,scss}"
-  ],
-  "engines": {
-    "node": "8.16"
-  }
+  ]
 }

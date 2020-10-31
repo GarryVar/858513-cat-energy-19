@@ -120,11 +120,18 @@ const server = () => {
     gulp.watch('src/scripts/**/*.js', gulp.series(scripts, refresh));
     gulp.watch('src/*.html', gulp.series(html, refresh));
 };
+exports.server = server;
+
 
 const refresh = done => {
   sync.reload();
   done();
-}
+};
+exports.refresh = refresh;
+
 
 const build = gulp.series(clean, copy, styles, html, scripts, server);
+exports.build = build;
+
 const start = gulp.series(build, server);
+exports.start = start;
