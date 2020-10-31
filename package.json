@@ -1,6 +1,6 @@
 {
   "name": "cat-energy-19",
-  "version": "17.1.0",
+  "version": "17.1.1",
   "private": true,
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
@@ -9,6 +9,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.13",
+    "deep-extend": "^0.6.0",
     "del": "^5.1.0",
     "gulp": "4.0.2",
     "gulp-babel": "^8.0.0",
@@ -45,5 +46,8 @@
     "src/scripts/**/*.js",
     "src/img/**/*.svg",
     "src/sass/**/*.{sass,scss}"
-  ]
+  ],
+  "dependencies": {
+    "merge": "^1.2.1"
+  }
 }
