@@ -24,6 +24,10 @@
 }
 
 .page-header__main-nav {
+  position: absolute;
+  top: 67px;
+  left: 0;
+
   order: 3;
 
   width: 100%;
@@ -32,6 +36,7 @@
   background-color: rgb(255, 255, 255);
 
   border-top: 1px solid #e6e6e6;
+  z-index: 999;
 }
 
 .page-header__burger {
