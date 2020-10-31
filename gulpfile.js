@@ -18,94 +18,113 @@ const gulp = require('gulp'),
       uglify = require('gulp-uglify-es').default;
 
 
-//CSS
-gulp.task('css', () => {
-  return gulp.src('source/sass/style.scss')
-        .pipe(plumber())
-        .pipe(sourcemap.init())
-        .pipe(sass())
-        .pipe(postcss([autoprefixer()]))
-        .pipe(csso())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemap.write('.'))
-        .pipe(gulp.dest('build/css'))
-        .pipe(reload({stream: true}))
-});
-
-//HTML
-gulp.task('html', () => {
-  return gulp.src('source/*.html')
-        .pipe(gulp.dest('build'))
-        .pipe(reload({stream: true}))
-});
-
-//JS
-gulp.task('js', () => {
-  return gulp.src('source/js/**/*.js')
-        .pipe(babel())
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('build/js'))
-        .pipe(reload({stream: true}))
-});
-
-//IMAGEMIN
-gulp.task('images', () => {
-  return gulp.src('source/img/**/*.{png, jpg, svg}')
-        .pipe(imagemin([
-          imagemin.optipng({optimizationLevel: 3}),
-          imagemin.mozjpeg({progressive: true}),
-          imagemin.svgo()
-          ]))
-        .pipe(gulp.dest('build/img'))
-});
-
-//WEBP
-gulp.task('webp', () => {
-  return gulp.src('source/img/**/*.{png, jpg}')
-        .pipe(webp({quality: 50}))
-        .pipe(gulp.dest('source/img'))
-});
-
-//CLEAN
-gulp.task('clean', () => {
-  return del('build')
-});
+//Styles
+const styles = () => {
+  return gulp.src('src/sass/index.scss')
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(csso())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('dist/styles'))
+    .pipe(reload({stream: true}))
+};
+exports.styles = styles;
 
 
-//copy
-gulp.task('copy', () => {
+
+//Html
+const html = () => {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('dist'))
+    .pipe(reload({stream: true}))
+};
+exports.html = html;
+
+
+
+//Scripts
+const scripts = () => {
+  return gulp.src('src/scrpits/**/*.js')
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(reload({stream: true}))
+};
+exports.scripts = scripts;
+
+
+
+//Imagemin
+const images = () => {
+  return gulp.src('src/img/**/*.{png, jpg, svg}')
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.svgo()
+      ]))
+    .pipe(gulp.dest('dist/img'))
+};
+exports.images = images;
+
+
+
+//Webp
+const convertWebp = () => {
+  return gulp.src('src/img/**/*.{png, jpg}')
+    .pipe(webp({quality: 50}))
+    .pipe(gulp.dest('src/img'))
+};
+exports.convertWebp = convertWebp;
+
+
+
+//Clean
+const clean = () => {
+  return del('dist')
+};
+exports.clean = clean;
+
+
+
+//Copy
+const copy = () => {
 return gulp.src([
-      'source/fonts/**/*.{woff,woff2}',
-      'source/img/**',
-      'source/js/**',
-      'source/*.ico'
-      ],
-      {base: 'source'}
-      )
-      .pipe(gulp.dest('build'))
-});
+  'src/fonts/**/*.{woff,woff2}',
+  'src/img/**',
+  'src/scripts/**',
+  'src/*.ico'
+  ],
+  {base: 'src'}
+  )
+  .pipe(gulp.dest('dist'))
+};
+exports.copy = copy;
 
 
-//SERVER
-gulp.task('server', () => {
-  server.init({
-    server: 'build/',
+
+//Server
+const server = () => {
+  sync.init({
+    server: 'dist/',
     open: true,
     notify: false,
     cors: true,
     ui: false
   })
 
-    gulp.watch('source/sass/**/*.scss', gulp.series('css','refresh'));
-    gulp.watch('source/js/**/*.js', gulp.series('js','refresh'));
-    gulp.watch('source/*.html', gulp.series('html','refresh'));
-});
+    gulp.watch('src/sass/**/*.scss', gulp.series(styles, refresh));
+    gulp.watch('src/scripts/**/*.js', gulp.series(scripts, refresh));
+    gulp.watch('src/*.html', gulp.series(html, refresh));
+};
 
-gulp.task('refresh', done => {
-  server.reload();
+const refresh = done => {
+  sync.reload();
   done();
-})
+}
 
-gulp.task('build', gulp.series('clean','copy','css','html','js'));
-gulp.task('start',gulp.series('build','server'));
+const build = gulp.series(clean, copy, styles, html, scripts);
+const start = gulp.series(build, server);
