@@ -1,21 +1,21 @@
 'use strict'
 
 const gulp = require('gulp'),
-      sourcemap = require('gulp-sourcemaps'),
-      postcss = require('gulp-postcss'),
-      autoprefixer = require('autoprefixer'),
-      posthtml = require('gulp-posthtml'),
-      webp = require('gulp-webp'),
-      imagemin = require('gulp-imagemin'),
-      server = require('browser-sync').create(),
-      reload = server.reload,
-      plumber = require('gulp-plumber'),
-      sass = require('gulp-sass'),
-      csso = require('gulp-csso'),
-      del = require('del'),
-      rename = require('gulp-rename'),
-      babel = require('gulp-babel'),
-      uglify = require('gulp-uglify-es').default;
+  sourcemap = require('gulp-sourcemaps'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  posthtml = require('gulp-posthtml'),
+  webp = require('gulp-webp'),
+  imagemin = require('gulp-imagemin'),
+  sync = require('browser-sync').create(),
+  reload = sync.reload,
+  plumber = require('gulp-plumber'),
+  sass = require('gulp-sass'),
+  csso = require('gulp-csso'),
+  del = require('del'),
+  rename = require('gulp-rename'),
+  babel = require('gulp-babel'),
+  uglify = require('gulp-uglify-es').default;
 
 
 //Styles
@@ -109,7 +109,7 @@ exports.copy = copy;
 //Server
 const server = () => {
   sync.init({
-    server: 'dist/',
+    server: 'dist',
     open: true,
     notify: false,
     cors: true,
@@ -126,5 +126,5 @@ const refresh = done => {
   done();
 }
 
-const build = gulp.series(clean, copy, styles, html, scripts);
+const build = gulp.series(clean, copy, styles, html, scripts, server);
 const start = gulp.series(build, server);
