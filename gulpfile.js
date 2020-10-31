@@ -13,9 +13,7 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   csso = require('gulp-csso'),
   del = require('del'),
-  rename = require('gulp-rename'),
-  babel = require('gulp-babel'),
-  uglify = require('gulp-uglify-es').default;
+  rename = require('gulp-rename');
 
 
 //Styles
@@ -48,9 +46,6 @@ exports.html = html;
 //Scripts
 const scripts = () => {
   return gulp.src('src/scrpits/**/*.js')
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({stream: true}))
 };
