@@ -122,7 +122,13 @@
   }
 
   .main-nav__list {
+    width: 100%;
     flex-direction: row;
+  }
+
+  .main-nav__item {
+    min-width: 100px;
+    padding: 0 15px;
   }
 
   .main-nav__link {
